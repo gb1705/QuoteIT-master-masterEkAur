@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+
+    <link.fls.SwipeStack
+        android:id="@+id/swipeStack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="44dp"
+        android:layout_above="@+id/star_button"
+
+        app:stack_rotation="10"
+        app:stack_size="3" />
+
+    <com.like.LikeButton
+        android:id="@+id/star_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        app:icon_size="30dp"
+        app:icon_type="heart" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="25dp"
+        fab:fab_addButtonColorNormal="#e31f65"
+        fab:fab_addButtonColorPressed="#e31f65"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_invitefriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_icon="@drawable/add"
+            fab:fab_title="Invite Friend" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+
+            fab:fab_icon="@drawable/social"
+            fab:fab_title="Share" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_icon="@drawable/gallery"
+            fab:fab_title="Gallery" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_icon="@drawable/settings"
+            fab:fab_title="Setting" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <!--<android.support.design.widget.CoordinatorLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/cordinator"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fabAdd"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:src="@drawable/add"-->
+    <!--app:fabSize="normal" />-->
+
+    <!--</android.support.design.widget.CoordinatorLayout>-->
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+</RelativeLayout>
